@@ -29,7 +29,5 @@ public:
 int main()
 {
     Number n1(100.99);
-    n1.show();
-
-    return 0;
+    n1.show();    return 0;
 }
