@@ -1,0 +1,36 @@
+/* 📘 Problem Statement:
+
+Create a class Box that stores length, width, and height.
+Use the this pointer to assign values to data members.
+Display the volume of the box.
+*/
+
+#include <iostream>
+using namespace std;
+
+class Box {
+private:
+    float length;
+    float width;
+    float height;
+
+public:
+    void setDimensions(float length, float width, float height) {
+        this->length = length;   // 'this' pointer refers to current object's data members
+        this->width = width;
+        this->height = height;
+    }
+
+    void displayVolume() {
+        float volume = this->length * this->width * this->height;
+        cout << "Volume of the box: " << volume << " cubic units" << endl;
+    }
+};
+
+int main() {
+    Box b;
+    b.setDimensions(4.5, 3.0, 2.0);
+    b.displayVolume();
+
+    return 0;
+}
